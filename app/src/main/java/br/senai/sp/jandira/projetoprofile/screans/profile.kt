@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.projetoprofile.screans
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -20,6 +21,7 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -428,7 +430,23 @@ Box(
                 )
             }
 
-//            Button() { } colocar botoes aqui
+            Row (
+                modifier = Modifier
+                    .fillMaxWidth()
+            ){
+                Button(
+                    onClick = {},
+                    modifier = Modifier
+                        .width(20.dp)
+                        .height(10.dp),
+                    shape = RoundedCornerShape(10.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xffFFC23D)
+                    ),
+                    border = BorderStroke(1.2.dp, Color(0xff3347B0))
+                ) { }
+            }
+
 
         }
 
