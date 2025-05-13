@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.projetoprofile.screans
 
+import android.content.Context
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.Column
 //import androidx.compose.foundation.layout.FlowColumnScopeInstance.align
 
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -20,11 +22,17 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForward
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -34,6 +42,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -355,8 +364,7 @@ Box(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 20.dp)
-                    .background(Color.Yellow),
+                    .padding(start = 20.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
@@ -378,7 +386,6 @@ Box(
             Column (
                 modifier = Modifier
                     .padding(start = 40.dp)
-                    .background(Color.Magenta)
             ) {
                 Text(
                     text = "Project Operation Team",
@@ -397,8 +404,7 @@ Box(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 20.dp)
-                    .background(Color.Yellow),
+                    .padding(start = 20.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
@@ -420,7 +426,6 @@ Box(
             Column (
                 modifier = Modifier
                     .padding(start = 40.dp)
-                    .background(Color.Magenta)
             ) {
                 Text(
                     text = "Darrel Steward",
@@ -433,18 +438,66 @@ Box(
             Row (
                 modifier = Modifier
                     .fillMaxWidth()
+                    .padding(top = 50.dp)
             ){
+//                Button(
+//                    onClick = {},
+//                    modifier = Modifier
+//                        .width(20.dp)
+//                        .height(10.dp),
+//                    shape = RoundedCornerShape(10.dp),
+//                    colors = ButtonDefaults.buttonColors(
+//                        containerColor = Color(0xffFFC23D)
+//                    ),
+//                    border = BorderStroke(1.2.dp, Color(0xff3347B0))
+//                ) { }
+                Spacer(modifier = Modifier.width(20.dp))
                 Button(
                     onClick = {},
+                    border = BorderStroke(1.dp, Color.Gray),
                     modifier = Modifier
-                        .width(20.dp)
-                        .height(10.dp),
-                    shape = RoundedCornerShape(10.dp),
+                        .width(220.dp)
+                        .height(35.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xffFFC23D)
-                    ),
-                    border = BorderStroke(1.2.dp, Color(0xff3347B0))
-                ) { }
+                        containerColor = Color.Transparent
+                    )
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.Person,
+                        contentDescription = "",
+                        tint = Color(0xffCC5DE8),
+                        modifier = Modifier
+                            .padding(end = 20.dp),
+
+                    )
+                    Text(
+                        text = "Add to contact",
+                        color = Color(0xFFCC5DE8)
+                    )
+
+                }
+
+                Spacer(modifier = Modifier.width(26.dp)) // Espaço horizontal entre os botões
+
+                Button(
+                    onClick = {},
+                    border = BorderStroke(1.dp, Color.Gray),
+                    modifier = Modifier
+                        .width(70.dp)
+                        .height(35.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Transparent
+                    )
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.Share,
+                        contentDescription = "",
+                        tint = Color(0xffCC5DE8),
+                        modifier = Modifier
+
+                        )
+
+                }
             }
 
 
